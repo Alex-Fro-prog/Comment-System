@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.comment-count {
+
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.comment-sort {
+    display: flex;
+}
+
+.comment-sort-container {
+    display: flex;
+    margin: 100px 0 35px 100px;
+}
+
+.form {
+    display: flex;
+    margin-left: 100px;
+    max-width: 1022px;
+}
+
+.user-info {
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.user-name {
+    font-size: 18px;
+    color: #122AC0;
+    font-weight: 600;
+}
+
+.input-char-container {
+    width: 688px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.char-count {
+    align-self: flex-end;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.char-warning {
+    font-size: 14px;
+    color: red;
+    display: none;
+    padding-bottom: 25px;
+    padding-left: 30px;
+}
+
+.button-char-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.input-text {
+    width: 688px;
+    height: auto;
+    padding: 20px 30px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-color: #fff;
+}
+
+.btn-send {
+    margin-left: 50px;
+    padding: 20px 60px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.btn-send:enabled {
+    background-color: #ABD873;
+    cursor: pointer;
+}
+
+.comment-field {
+    margin-left: 100px;
+    margin-top: 44px;
+}
+
+.time-on-screen {
+    padding-left: 15px;
+    color: #888;
+    font-size: 12px;
+}
+
+.message-on-screen {
+    width: 916px;
+    padding-top: 10px;
+}
+
+.reply {
+    margin-left: 20px;
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
+}
+
+.comment {
+    display: flex;
+    margin-top: 28px;
+}
+
+.comment img {
+    border-radius: 50%;
+    margin-right: 15px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+.comment-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+}
+
+.comment-name {
+    font-size: 18px;
+    color: #122AC0;
+    font-weight: 600;
+}
+
+.comment-body {
+    padding: 15px 0;
+    max-width: 916px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.comment-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.reply-button {
+    font-size: 16px;
+    color: #9D9D9D;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    max-width: 120px;
+}
+
+.favorite-button {
+    font-size: 16px;
+    color: #9D9D9D;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.favorite-icon {
+    margin-right: 5px;
+}
+
+.favorite-icon .heart-filled {
+    display: none;
+}
+
+.favorite-button.active .heart-empty {
+    display: none;
+}
+
+.favorite-button.active .heart-filled {
+    display: inline;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-value {
+    padding: 0 10px;
+}
+
+.positive-rating {
+    color: #8AC540;
+}
+
+.negative-rating {
+    color: #FF0000;
+}
+
+.sort-comments {
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 16px;
+    color: #9D9D9D;
+    border: none;
+    text-decoration: underline;
+} 
+
+select:active, select:focus{
+    outline:none
+}
+
+#sort-direction {
+    margin-left: 10px;
+    padding: 5px 0;
+    font-size: 16px;
+    color: #9D9D9D;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#show-favorites {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 16px;
+    color: #9D9D9D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.show-favorites-icon {
+    margin-left: 5px;
+}
+
+/** media **/
+
+@media (min-width: 769px) and (max-width:1024px) {
+    .comment-count {
+        font-size: 18px;
+    }
+    .comment-sort-container, .form, .user-info, .comment-field {
+        margin-left: 80px;
+    }
+    .user-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    .user-name, .comment-name {
+        font-size: 16px;
+    }
+    .input-char-container, .input-text {
+        width: 600px;
+    }
+    .btn-send {
+        margin-left: 40px;
+        padding: 15px 50px;
+    }
+    .message-on-screen, .comment-body {
+        width: 800px;
+        font-size: 16px;
+    }
+    .reply-button, .favorite-button, .sort-comments, #sort-direction, #show-favorites {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 415px) and (max-width:768px) {
+    .comment-count {
+        font-size: 16px;
+    }
+    .comment-sort-container, .form, .user-info, .comment-field {
+        margin-left: 30px;
+    }
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    .user-name, .comment-name {
+        font-size: 14px;
+    }
+    .input-char-container, .input-text {
+        width: 500px;
+    }
+    .btn-send {
+        margin-left: 30px;
+        padding: 10px 40px;
+    }
+    .message-on-screen, .comment-body {
+        width: 600px;
+        font-size: 14px;
+    }
+    .reply-button, .favorite-button, .sort-comments, #sort-direction, #show-favorites {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 414px) {
+    .form {
+        flex-direction: column;
+    }
+    .comment-count {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .comment-sort-container {
+        width: 400px;
+        flex-direction: column;
+    }
+    .comment-sort-container, .form, .user-info, .comment-field {
+        margin-left: 10px;
+    }
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+    }
+    .user-name, .comment-name {
+        font-size: 12px;
+    }
+    .input-char-container, .input-text {
+        width: 390px;
+    }
+    .btn-send {
+        margin-left: 0;
+        margin-top: 5px;
+        padding: 16px 162px;
+    }
+    .message-on-screen, .comment-body {
+        width: 270px;
+        font-size: 12px;
+    }
+    .reply-button, .favorite-button, .sort-comments, #sort-direction, #show-favorites {
+        font-size: 10px;
+    }
+    .sort-comments {
+        margin: 0;
+    }
+}
